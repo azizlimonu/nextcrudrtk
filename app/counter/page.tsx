@@ -1,16 +1,25 @@
-import { decrement, decrementByAmount, increment, incrementByAmount, reset } from '@/redux/features/counterSlice';
+"use client";
+
+import {
+  decrement,
+  decrementByAmount,
+  increment,
+  incrementByAmount,
+  reset
+} from '@/redux/features/counterSlice';
 import { useAppDispatch, useAppSelector } from '@/redux/hooks'
 import React from 'react'
 
 const Page = () => {
   const count = useAppSelector((state) => state.count.value);
   const dispatch = useAppDispatch();
+  console.log("COUNT", count);
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="bg-white p-8 rounded-lg shadow-md">
-        <h1 className="text-2xl font-semibold mb-4">
-          Counter: {count}
+      <div className="bg-white p-8 rounded-lg shadow-md w-full">
+        <h1 className="text-2xl font-semibold text-black flex items-center text-center">
+          {count}
         </h1>
         <div className="flex gap-4">
           <button

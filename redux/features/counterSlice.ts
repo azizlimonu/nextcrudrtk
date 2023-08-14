@@ -22,7 +22,7 @@ export const counter = createSlice({
       state.value += action.payload;
     },
     decrementByAmount: (state, action: PayloadAction<number>) => {
-
+      state.value -= action.payload;
     },
     reset: () => initialState
   }
