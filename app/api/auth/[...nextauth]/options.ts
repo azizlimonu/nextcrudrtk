@@ -23,6 +23,7 @@ export const options: NextAuthOptions = {
         }
       },
       async authorize(credentials: any) {
+        // Soon connect with the prisma 
         const user = { id: "24", name: "John", password: "123456" }
 
         if (credentials?.username === user.name && credentials?.password === user.password) {
